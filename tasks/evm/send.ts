@@ -27,7 +27,7 @@ const action: ActionType<TaskArguments> = async (
 ) => {
     const signer = await hre.ethers.getNamedSigner('deployer')
     // @ts-ignore
-    const token = (await hre.ethers.getContract(contractName)).connect(signer)
+    const token = (await hre.ethers.getContract("DawaeOFT")).connect(signer)
 
     // if (isSepolia(hre.network.name)) {
     //     // @ts-ignore
@@ -55,7 +55,7 @@ const action: ActionType<TaskArguments> = async (
     const txReceipt = await txResponse.wait()
     console.log(`send: ${amount} to ${to}: ${txReceipt.transactionHash}`)
     console.log(
-        `Track cross-chain transfer here: ${getLayerZeroScanLink(txReceipt.transactionHash, dstEid == EndpointId.SOLANA_V2_TESTNET)}`
+        `Track cross-chain transfer here: ${getLayerZeroScanLink(txReceipt.transactionHash, dstEid == EndpointId.SOLANA_V2_MAINNET)}`
     )
 }
 

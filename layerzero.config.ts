@@ -12,7 +12,7 @@ const sepoliaContract: OmniPointHardhat = {
 
 const solanaContract: OmniPointHardhat = {
     eid: EndpointId.SOLANA_V2_MAINNET,
-    address: '', // NOTE: update this with the OFTStore address.
+    address: 'D85wtq6EuumQHbGQiohqgCD7aZ3XnvTZKWmsAMpiwwpf', // NOTE: update this with the OFTStore address.
 }
 
 const EVM_ENFORCED_OPTIONS: OAppEnforcedOption[] = [
